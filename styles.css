@@ -1,0 +1,468 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/* Typography */
+body {
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #003366, #0077b6);
+    color: white;
+    padding:0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
+    border-radius: 0 0 20px 20px;
+    font-size: 10px; /* Adjusted font size for header */
+}
+
+.header-content h2 {
+    position: relative;
+    top: 5px; /* Adjust the amount to shift vertically */
+    left: 15px; /* Adjust the amount to shift horizontally */
+    font-size: 15px; /* Adjust the font size if needed */
+}
+
+/* Add different colors to each keyword */
+.header-content h2 span {
+    color: #ff0000; /* Color for FLOW */
+}
+
+.header-content h2 span:nth-of-type(2) {
+    color: #ffee00; /* Color for PRESSURE */
+}
+
+.header-content h2 span:nth-of-type(3) {
+    color: #0ddfff; /* Color for LEVEL */
+}
+
+.header-content h2 span:nth-of-type(4) {
+    color:  #c2ff33; /* Color for TEMPERATURE */
+}
+
+.header-content h2 span:nth-of-type(5) {
+    color: #ff00ea; /* Color for Leak */
+}
+
+
+
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#logo {
+margin-top: 5px;;
+    height:70px; /* Adjusted height for the logo */
+    width:70px /* Allow the width to adjust automatically based on the height */
+}
+
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+@media screen and (max-width: 768px) {
+    header h1 {
+        margin-right:60px; /* Adjust margin to shift the h1 to the left */
+    }
+}
+
+h2 {
+    position: relative;
+    list-style-type: none; /* Remove default list styling */
+}
+
+h2 span::before {
+    content: "\2022"; /* Unicode for the bullet character */
+    color: #ffffff; /* Color of the bullet */
+    margin-right: 5px; /* Adjust spacing between bullet and text */
+}
+
+
+
+
+/* Navigation Bar Styles */
+.nav-container {
+    position: fixed;
+    top: 0;
+    right: 15px;
+    padding:3px;
+    border-bottom-right-radius:20%;
+    background-color:  rgba(0, 86, 179, 0.7); /* Adjust background color and transparency */
+    z-index: 1000; /* Ensure the navigation bar stays on top */
+}
+
+.nav-container nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container nav ul li {
+    margin-bottom: 10px; /* Add margin between navigation items */
+    position: relative; /* Ensure dropdown positioning is relative to the list item */
+}
+
+.nav-container nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-container nav ul li a:hover {
+    color: yellow; /* Change color on hover */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0b70db; /* Match with the gradient blue color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensure the dropdown appears on top of other elements */
+    min-width: 120px;
+    border-radius: 5px; /* Add some border radius for better aesthetics */
+    padding: 10px 0; /* Add some padding to the dropdown */
+    left: -30px; /* Adjust the position towards the left */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-container ul li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* Products Section */
+#products {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 32px; /* Increase font size for emphasis */
+    margin-bottom: 40px;
+    color: #333; /* Match text color with anchor tags */
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.category {
+    margin: 0 20px; /* Adjusted margin */
+}
+
+.category h3 {
+    font-size: 24px; /* Adjusted font size */
+    margin-bottom: 10px; /* Adjusted margin */
+}
+.product{
+    margin-top: -30px;
+}
+.product a {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px; /* Adjusted font size */
+    padding: 10px 10px; /* Adjusted padding */
+    margin: 15px 0; /* Adjusted margin */
+    background-color: #fff;
+    border-radius: 8px; /* Adjusted border radius */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.product a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    width: 100%;
+    border-bottom: 2px solid #ccc; /* Adjusted color */
+    padding-top: 10px; /* Adjusted margin */
+}
+@keyframes blink {
+    0% {
+        opacity: 2;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink {
+    color: #003366; /* Change color as needed */
+
+    
+}
+
+
+
+/* About Section */
+#about {
+    background-color:white;
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#about h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#company-description {
+    padding:30px;
+    background-color:white;
+    text-align: center; /* Center-align the text */
+    margin-top:5px; /* Add some top margin for spacing */
+    font-size: 20px; /* Adjust the font size */
+    color: #333; /* Set the text color */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+#industry {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+/* Media query for tablets (landscape) and smaller */
+@media screen and (max-width: 1024px) {
+    #industry {
+        height: auto; /* Allow the height to adjust automatically */
+        max-width: 100%; /* Ensure the image doesn't exceed the screen width */
+        max-height: 50vh; /* Set a maximum height relative to the viewport height */
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+    #industry {
+        height: auto; /* Allow the height to adjust automatically */
+        max-width: 100%; /* Ensure the image doesn't exceed the screen width */
+        max-height: 40vh; /* Set a maximum height relative to the viewport height */
+    }
+}
+
+.grid-container {
+    margin-top: -10px; /* Adjust margin to bring grid closer */
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Adjust gap between grid items */
+    padding: 0px; /* Padding for the container */
+}
+
+.grid-item {
+    background-color:white; /* Background color for grid items */
+    text-align: center; /* Center align content */
+    flex: 0 0 calc(50% - 20px); /* Set width for each grid item (50% with gap) */
+    height: auto; /* Set auto height for grid items */
+    margin-bottom: 20px; /* Add margin to the bottom of each grid item */
+}
+
+.grid-item img {
+    max-width: 100%; /* Maximum width for images */
+    max-height: 100%; /* Maximum height for images */
+    height: auto; /* Maintain aspect ratio of images */
+    object-fit: cover; /* Ensure images cover the grid item */
+}
+
+
+#gallery p {
+    font-size: 22px;
+}
+
+/* Brands Section */
+#brands {
+    background-color:#f5f5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+#brands h2, #brands p {
+    margin: 0 auto;
+    text-align: center;
+}
+#brands p {
+    font-size:20px;
+}
+
+#brands button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #265f9b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#brands button:hover {
+    background-color: #021e3b;
+    color: #fff;
+}
+footer {
+    background: linear-gradient(to right, #003366, #0077b6);
+    color: rgb(255, 255, 255);
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
+    border-radius: 20px 20px 0 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: yellow;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: rgb(25, 255, 236);
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.social-icons .icon i {
+    transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover i {
+    color: rgb(25, 255, 236);
+}
+/* Footer Styles */
+#contact {
+    background: linear-gradient(to right, #003366, #0077b6);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
+    border-radius: 20px 20px 0 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.social-icons {
+    flex: 1 1 40%;
+    margin-bottom: 20px;
+}
+
+.contact-info h2,
+.social-icons h2 {
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif; /* Example of a different font family */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact-info p {
+    font-family: 'Arial', sans-serif; /* Example of a different font family */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.social-icons .icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-family: 'FontAwesome', sans-serif; /* Example of using a custom font */
+}
+
+.social-icons .icon:hover {
+    color: #19c6ff;
+}
+p{
+    Font: size 28px;
+}

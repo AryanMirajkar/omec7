@@ -1,0 +1,62 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #003366, #0077b6);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
+    border-radius: 0 0 20px 20px;
+}
+
+.header-content h1 {
+    font-size: 30px;
+}
+
+.brands-section {
+    display: grid;
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 20px; /* Spacing between grid items */
+    justify-content: center;
+    padding: 20px;
+}
+
+.brand {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.brand img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.brand h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.brand p {
+    font-size: 16px;
+    color: #666;
+}
